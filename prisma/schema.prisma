@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Drone {
+  droneID        String    @id @default(auto()) @map("_id") @db.ObjectId
+  droneName      String
+  droneTag       String
+  droneBrand     String
+  droneModel     String
+  droneStatus    Boolean   @default(false)
+  droneCreatedAt DateTime  @default(now())
+  droneUpdatedAt DateTime  @default(now()) @updatedAt
+  droneAvatar    Avatar?
+  dronePath      Path?
+  droneLocation  Location?
+}
+
+model Path {
+  pathID          String   @id @default(auto()) @map("_id") @db.ObjectId
+  droneId         String   @unique @db.ObjectId
+  drone           Drone    @relation(fields: [droneId], references: [droneID])
+  droneFlyAt      DateTime
+  dronePathLatLng LatLng[]
+}
+
+model LatLng {
+  latlngID String @id @default(auto()) @map("_id") @db.ObjectId
+  lat      Float
+  lng      Float
+
+  Path   Path   @relation(fields: [pathID], references: [pathID])
+  pathID String @db.ObjectId
+}
+
+model Avatar {
+  avatarId      String @id @default(auto()) @map("_id") @db.ObjectId
+  droneId       String @unique @db.ObjectId
+  drone         Drone  @relation(fields: [droneId], references: [droneID])
+  avatarURL     String
+  avatarURLName String
+}
+
+model Location {
+  locationID   String @id @default(auto()) @map("_id") @db.ObjectId
+  droneID      String @unique @db.ObjectId
+  drone        Drone  @relation(fields: [droneID], references: [droneID])
+  locationName String
+  locationLat  Float
+  locationLng  Float
+}
