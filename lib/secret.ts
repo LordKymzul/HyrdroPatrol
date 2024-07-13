@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 
 dotenv.config({ path: ".env" })
+//test
 
 export const GOOGLEAPIKEY = process.env.GOOGLEAPIKEY
 export const PYTHONSERVER = process.env.PYTHONSERVER
