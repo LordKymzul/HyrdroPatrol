@@ -1,54 +1,55 @@
-# Messenger Clone - Flutter
+# HydroPatrol 🌊
 
 [![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
 [![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-# Welcome to Messenger Clone 📱
+# Welcome to HydroPatrol 🌊
 
 :star: Star us on GitHub — it motivates us a lot!
 
-Messenger Clone is a fully functional messaging app built using Flutter and Firebase. This app is still in development, and we are open to any issues or feature requests.
+HydroPatrol is a web-based system capable of managing & monitoring drones and predicting potential leaks. This system is still in development, and we welcome any issues or feature requests.
 
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/air-selangor-e0ef1.appspot.com/o/project%2FMessenger-Clone.png?alt=media&token=7a02636f-dfa4-4092-a5ea-4999d46e9cde)
+![App Screenshot](https://github.com/LordKymzul/HyrdroPatrol/blob/main/Air%20Selangor.png)
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#system-design">System Design</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#contributions">Contributions</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ol>
-</details>
+# Features 🌊
 
-# Features 📱
+### 1. Drone Management 🚁
+Manage drones, their routes, and maintenance schedules.
 
-### 1. Manage Friends 👥
-Users can add and remove friends from their contact list.
+### 2. Real-time Monitoring 📡
+Monitor drones in real-time to detect leaks and anomalies.
 
-### 2. Real-time Chat 💬
-Real-time messaging allows users to chat with friends individually.
+### 3. Predictive Analytics 📈
+Use predictive models to anticipate potential leaks and take preventive actions.
 
-### 3. Group Chat 👨‍👩‍👧‍👦
-Users can create groups and participate in group chats with multiple members.
+### 4. Data Visualization 📊
+Visualize drone data and leak predictions for better decision-making.
 
-### 4. Status Updates 📝
-Users can upload statuses similar to WhatsApp, which automatically delete after 24 hours.
+---
 
-### 5. Secure Authentication 🔐
-Users are authenticated securely using Firebase Authentication.
+## Built With
+- [Next.js](https://nextjs.org/) - React framework for server-rendered React applications.
+- [Node.js](https://nodejs.org/) - JavaScript runtime for building server-side applications.
+- [MongoDB](https://www.mongodb.com/) - NoSQL database for storing and querying data.
 
-### 6. Multimedia Support 📷
-Send images, videos, and other file types within the chat.
+## System Design
+- High-level architecture diagram (if available)
 
-### 7. Push Notifications 🔔
-Receive notifications for new messages and updates.
+## Installation
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Set up MongoDB and configure connection details.
+4. Start the application using `npm run dev`.
 
-### 8. User Profiles 🧑
-Set display names, profile pictures, and status updates
+## Contributions
+Contributions are welcome! Please fork the repository and submit pull requests to contribute.
+
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Acknowledgments
+- Mention any contributors or resources used in development.
+
+## FAQ
+- Common questions and answers about the project.
